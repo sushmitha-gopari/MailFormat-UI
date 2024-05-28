@@ -1,0 +1,162 @@
+.ima {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+.root {
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  scrollbar-width: 1px;
+  z-index: 900;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.content {
+  flex: 1;
+  padding-left: 250px;
+  overflow-y: auto;
+}
+
+.listItem {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 39px !important;
+  transition: background-color 0.3s;
+}
+
+.listItem:hover {
+  background-color: #ccc;
+}
+
+.listItem .icon {
+  color: #858282;
+  margin-right: 8px;
+  transition: color 0.3s;
+}
+
+.listItem:hover .icon {
+  color: rgb(160, 57, 228);
+}
+
+.listItem:hover .MuiTypography-root {
+  color: rgb(160, 57, 228);
+}
+
+.listItem-text {
+  color: #858282 !important;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.download-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.box-cards{
+  margin-top: 150px;
+}
+
+.fixed-container {
+  position: fixed;
+  top: 60px;
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: rgba(255, 255, 255, 1); /* Semi-transparent white background */
+  backdrop-filter: blur(5px); /* Add a blur effect */
+  transition: background-color 0.3s;
+  width: calc(47% - 120px) !important;
+}
+
+/* Add styling when container is scrolled */
+.fixed-container.scrolled {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.paper-scrollable {
+  overflow-y: auto;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #fff transparent transparent transparent;
+  top: -5px;
+  left: calc(50% - 5px);
+}
+
+.text-color-change {
+  color: #858282;
+}
+
+.Mui-checked{
+  color: rgb(160, 57, 228) !important;
+}
